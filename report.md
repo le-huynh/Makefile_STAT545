@@ -11,12 +11,10 @@ Create the R Markdown file `report.rmd` that:
 * reports the most common word length  
 * displays the pre-made histogram histogram.png  
 
-```{r load-hist-dat, include = FALSE}
-dat <- read.delim("histogram.tsv")
-```
 
-The downloaded dictionary includes `r sum(dat$Freq)` words.  
-The most common word lengths is `r with(dat, Length[which.max(Freq)])`.  
+
+The downloaded dictionary includes 235970 words.  
+The most common word lengths is 9.  
 
 This is the `histogram.png`.  
 

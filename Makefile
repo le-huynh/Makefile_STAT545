@@ -1,7 +1,7 @@
 all: report.html
 
 clean:
-	rm -f words.txt histogram.tsv histogram.png report.html
+	rm -f words.txt histogram.tsv histogram.png report.md report.html
 
 report.html: report.rmd histogram.tsv histogram.png
 	Rscript -e 'rmarkdown::render("$<")'

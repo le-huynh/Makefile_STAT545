@@ -1,0 +1,30 @@
+---
+title: "Report"
+author: "Ly"
+date: "August 23, 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Create the R Markdown file `report.rmd` that:  
+* reads the table of word lengths histogram.tsv  
+* reports the most common word length  
+* displays the pre-made histogram histogram.png  
+
+## Read `histogram.tsv`
+```{r}
+dat = read.delim(here::here("histogram.tsv"))
+
+str(dat)
+
+head(dat)
+```
+
+The most common word lengths is `r which(dat$Freq == max(dat$Freq))`.  
+
+This is the `histogram.png`.  
+
+![](C:/Users/LY/Google Drive/Git/Makefile_STAT545/histogram.png)  

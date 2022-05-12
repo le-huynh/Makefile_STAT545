@@ -1,0 +1,34 @@
+---
+output: 
+    html_document:
+      keep_md: TRUE
+---
+
+Read the table of word lengths histogram.tsv  
+
+```{r message=FALSE}
+library(tidyverse)
+
+data <- read_tsv(here::here("chap36_makefile/histogram.tsv"))
+
+data
+```
+
+```{r}
+data2 = data %>% filter(freq == max(freq))
+
+data2
+```
+
+
+The most common word length is `r data2$length`.  
+
+Display the pre-made histogram histogram.png  
+
+```{r}
+knitr::include_graphics(here::here("chap36_makefile/histogram.png"))
+```
+
+
+
+
